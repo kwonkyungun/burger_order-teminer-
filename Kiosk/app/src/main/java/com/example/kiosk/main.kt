@@ -6,5 +6,5 @@ fun main (){
 
 
     println("${num1}을 ${num2}로 나눈 몫은 ${result} 입니다.")
-
+//ddd
 }
