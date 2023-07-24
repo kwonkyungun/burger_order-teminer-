@@ -4,6 +4,7 @@ package com.example.menu
 fun main (){
         println("========================Welcome=========================")
         println("[1] Burger Menu, [2] Side Menu, [3] Drink Menu, [4] 종료")
+
         var select = readLine()!!.toInt()
         if (select == 1){
                 println("햄버거메뉴입니다.")
