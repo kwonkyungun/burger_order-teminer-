@@ -1,6 +1,11 @@
 package com.example.menu
 
-fun main (){
+fun main(){
+        initmenu()
+
+}
+
+fun initmenu (){
         println("========================Welcome=========================")
         println("[1] Burger Menu, [2] Side Menu, [3] Drink Menu, [4] 종료")
 
@@ -17,7 +22,7 @@ fun main (){
         }
         else {
                 println("잘못된 정보입니다.")
+                initmenu()
         }
 }
 
-//안녕하세요 alstja

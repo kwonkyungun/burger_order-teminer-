@@ -24,6 +24,7 @@ fun main() {
         fff().Ingredients()
     } else if (Burgerselect == 0) {
         println("돌아가기")
+        initmenu()
     }
 }
 
@@ -43,16 +44,19 @@ class aaa {
                     count1++
                     println("${count1}")
                 }
+
                 2 -> {
                     println("양상추를 추가합니다.")
                     count2++
                     println("${count2}")
                 }
+
                 3 -> {
                     println("소스를 추가합니다.")
                     count3++
                     println("${count3}")
                 }
+
                 else -> {
                     println("종료.")
                     break
@@ -61,6 +65,7 @@ class aaa {
         }
     }
 }
+
 class bbb {
     fun Ingredients() {
         var count1 = 0
@@ -77,16 +82,19 @@ class bbb {
                     count1++
                     println("${count1}")
                 }
+
                 2 -> {
                     println("양상추를 추가합니다.")
                     count2++
                     println("${count2}")
                 }
+
                 3 -> {
                     println("소스를 추가합니다.")
                     count3++
                     println("${count3}")
                 }
+
                 else -> {
                     println("종료.")
                     break
@@ -95,6 +103,7 @@ class bbb {
         }
     }
 }
+
 class ccc {
     fun Ingredients() {
         var count1 = 0
@@ -111,16 +120,19 @@ class ccc {
                     count1++
                     println("${count1}")
                 }
+
                 2 -> {
                     println("양상추를 추가합니다.")
                     count2++
                     println("${count2}")
                 }
+
                 3 -> {
                     println("소스를 추가합니다.")
                     count3++
                     println("${count3}")
                 }
+
                 else -> {
                     println("종료.")
                     break
@@ -129,6 +141,7 @@ class ccc {
         }
     }
 }
+
 class ddd {
     fun Ingredients() {
         var count1 = 0
@@ -145,16 +158,19 @@ class ddd {
                     count1++
                     println("${count1}")
                 }
+
                 2 -> {
                     println("양상추를 추가합니다.")
                     count2++
                     println("${count2}")
                 }
+
                 3 -> {
                     println("소스를 추가합니다.")
                     count3++
                     println("${count3}")
                 }
+
                 else -> {
                     println("종료.")
                     break
@@ -163,6 +179,7 @@ class ddd {
         }
     }
 }
+
 class fff {
     fun Ingredients() {
         var count1 = 0
@@ -179,16 +196,19 @@ class fff {
                     count1++
                     println("${count1}")
                 }
+
                 2 -> {
                     println("양상추를 추가합니다.")
                     count2++
                     println("${count2}")
                 }
+
                 3 -> {
                     println("소스를 추가합니다.")
                     count3++
                     println("${count3}")
                 }
+
                 else -> {
                     println("종료.")
                     break
