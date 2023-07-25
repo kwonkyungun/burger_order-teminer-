@@ -65,11 +65,11 @@ class CashShop private constructor() {
         }
     }
 
-    fun purchaseHamburgerPriceByclassperson(character: classperson) {
+    fun purchaseBasicBurgerPriceByclassperson(character: classperson) {
         if (character.money >= BasicBurgerPrice) {
             println("[구매 후 금액]: [${character.money} - ${BasicBurgerPrice}] = ${character.money - BasicBurgerPrice}")
             character.money -= BasicBurgerPrice
-            character.shoppinglist.add("Hamburger를 구매합니다")
+            character.shoppinglist.add("BasicBurger를 구매합니다")
         } else {
             println("돈이 부족합니다.")
 
