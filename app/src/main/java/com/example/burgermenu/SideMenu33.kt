@@ -57,6 +57,7 @@ class SideMenu {
             initmenu()
         } else {
             println("번호를 다시 입력해 주세요.")
+            initmenu()
         }
     }
 }
