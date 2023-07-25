@@ -4,13 +4,11 @@ import java.util.function.BinaryOperator
 
 fun main() {
     val myMoney = initmoney("money").toString().toInt()
+    val myName = initmoney("name").toString()
     initmoney(type = String.toString())
 
     initmenu()
-
 }
-
-
 fun initmoney(type: String): Any? {
     return when (type) {
         "money" -> {
@@ -24,7 +22,6 @@ fun initmoney(type: String): Any? {
                 }
             }
         }
-
         else -> {}
     }
 }
@@ -48,84 +45,118 @@ fun initmenu() {
         initmenu()
     }
 }
+//interface
+class classperson (val money1: Int,val name1 :String): Character {
+    var name: String
+    var money: Int
+    var shoppinglist: MutableList<String>
 
-class classDrink {
-    fun Beverage() {
-
-        println("1번: [콜라] 2번: [사이다] 3번: [환타] 4번:[미란다] 5번:[뒤로가기]")
-        var Drinkselect = readLine()!!.toInt()
-        var count1 = 1
-        var count2 = 1
-        var count3 = 1
-        var count4 = 1
-        if (Drinkselect == 1) {
-            count1++
-        } else if (Drinkselect == 2) {
-            count2++
-        } else if (Drinkselect == 3) {
-            count3++
-        } else if (Drinkselect == 4) {
-            count4++
-        } else if(Drinkselect == 5) {
-            initmenu()
-        } else {
-            println("잘못입력하였습니다.")
-        }
-
-
-        while (true) {
-            println("[1] 콜라 추가 [2] 사이다 추가 [3] 환타 추가 [4] 미란다 추가 [5]뒤로가기")
-            var selectNumber = readLine()!!.toInt()
-
-            when (selectNumber) {
-                1 -> {
-                    println("콜라를 ${count1}잔 추가합니다.")
-                    count1++
-                }
-                2 -> {
-                    println("사이다를 ${count2}잔 추가합니다.")
-                    count2++
-                }
-                3 -> {
-                    println("환타를 ${count3}잔 추가합니다.")
-                    count3++
-                }
-                4 -> {
-                    println("미란다를 ${count3}잔 추가합니다.")
-                    count4++
-                }
-                else -> {
-                    println("메인메뉴로 돌아갑니다.")
-                    break
-                }
-            }
-        }
-        initmenu()
+    constructor(_name: String, _money: Int):this(_money,_name) {
+        money = _money
+        name = _name
+        shoppinglist = mutableListOf<String>()
+        println("나의 이름은 ${name} 입니다.")
+        println("현재 금액은 ${money}원 있습니다.")
     }
 }
-//    if (Drinkselect == 1) {
-//        println("콜라를 선택하였습니다.")
-//        val num1 = "콜라"
-//
-//    } else if (Drinkselect == 2) {
-//        println("사이다를 선택하였습니다.")
-//        val num1 = "사이다"
-//
-//    } else if (Drinkselect == 3) {
-//        println("환타를 선택하였습니다.")
-//        val num1 = "환타"
-//
-//    } else if (Drinkselect == 4) {
-//        println("미란다를 선택하였습니다.")
-//        val num1 = "미란다"
-//
-//    } else if (Drinkselect == 5) {
-//        println("뒤로가기")
-//        initmenu()
-//    } else {
-//        println("잘못선택하였습니다")
-//        Beverage()
-//    }
 
-//}
+class CashShop private constructor() {
+    private val cola = 1000
+    private val cider = 800
+    private val Fanta = 700
+    private val Miranda = 500
 
+    companion object {
+        @Volatile
+        private var instance: CashShop? = null
+
+        fun getInstance(): CashShop {
+            if (instance == null) {
+                synchronized(this) {
+                    instance = CashShop()
+                }
+            }
+            return instance!!
+        }
+    }
+    fun colapurchase(Character: classperson) {
+        if (Character.money >= cola) {
+            println("[구매 후 금액]: [${Character.money} - ${cola}] = ${Character.money - cola}")
+            Character.money -= cola
+            Character.shoppinglist.add("콜라")
+        } else if (Character.money >= cider) {
+            println("[구매 후 금액]: [${Character.money} - ${cider}] = ${Character.money - cider}")
+            Character.money -= cider
+            Character.shoppinglist.add("사이다")
+        } else if (Character.money >= Fanta) {
+            println("[구매 후 금액]: [${Character.money} - ${Fanta}] = ${Character.money - Fanta}")
+            Character.money -= Fanta
+            Character.shoppinglist.add("환타")
+        } else if (Character.money >= Miranda) {
+            println("[구매 후 금액]: [${Character.money} - ${Miranda}] = ${Character.money - Miranda}")
+            Character.money -= Miranda
+            Character.shoppinglist.add("미란다")
+        } else {
+            println("돈이 부족합니다.")
+        }
+    }
+}
+
+    open class classDrink {
+        fun Beverage() {
+
+            println("1번: [콜라] 2번: [사이다] 3번: [환타] 4번:[미란다] 5번:[뒤로가기]")
+            var Drinkselect = readLine()!!.toInt()
+            var count1 = 1
+            var count2 = 1
+            var count3 = 1
+            var count4 = 1
+            if (Drinkselect == 1) {
+                count1++
+            } else if (Drinkselect == 2) {
+                count2++
+            } else if (Drinkselect == 3) {
+                count3++
+            } else if (Drinkselect == 4) {
+                count4++
+            } else if (Drinkselect == 5) {
+                initmenu()
+            } else {
+                println("잘못입력하였습니다.")
+            }
+
+
+            while (true) {
+                println("[1] 콜라 추가 [2] 사이다 추가 [3] 환타 추가 [4] 미란다 추가 [5]뒤로가기")
+                var selectNumber = readLine()!!.toInt()
+
+                when (selectNumber) {
+                    1 -> {
+                        println("콜라를 ${count1}잔 추가합니다.")
+                        count1++
+                    }
+
+                    2 -> {
+                        println("사이다를 ${count2}잔 추가합니다.")
+                        count2++
+                    }
+
+                    3 -> {
+                        println("환타를 ${count3}잔 추가합니다.")
+                        count3++
+                    }
+
+                    4 -> {
+                        println("미란다를 ${count3}잔 추가합니다.")
+                        count4++
+                    }
+
+                    else -> {
+                        println("메인메뉴로 돌아갑니다.")
+                        break
+                    }
+                }
+            }
+            initmenu()
+        }
+    }
