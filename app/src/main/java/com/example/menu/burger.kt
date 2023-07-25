@@ -22,12 +22,13 @@ class Hamburger {
         var count5 = 1
         if (Burgerselect == 1) {
             println("ShackBurger를 고르셨습니다")
-            println("ShackBurger | W 6.9 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거")
+            println("ShackBurger | W 6900 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거")
             Ingredients()
             count1++
         } else if (Burgerselect == 2) {
             println("SmokeShack를 고르셨습니다")
             println("SmokeShack | W 8900 | 베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거")
+            //Shoppinglist()
             Ingredients()
             count2++
         } else if (Burgerselect == 3) {
@@ -53,12 +54,18 @@ class Hamburger {
 
 
     fun Ingredients() {
+        println("[ Add Ingredients ]")
+        println("1. Patty        | W 1500 | 패티 한 장 추가하기")
+        println("2. Lettuce      | W 1000 | 양상추 추가하기")
+        println("3. ShakeSource  | W 1000 | 쉑소스 추가하기")
+        println("4. 추가안함      | 뒤로가기")
+
         var count1 = 1
         var count2 = 1
         var count3 = 1
 
         while (true) {
-            println("[1] 패티 추가, [2] 양상추 추가, [3] 쉑소스 추가 4.[종료]")
+            println("[1] 패티 추가, [2] 양상추 추가, [3] 쉑소스 추가 4.[추가안함]")
             var selectNumber = readLine()!!.toInt()
 
             when (selectNumber) {
@@ -81,7 +88,7 @@ class Hamburger {
                 }
 
                 else -> {
-                    println("종료.")
+                    println("뒤로가기")
                     break
                 }
             }
