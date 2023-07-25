@@ -5,7 +5,7 @@ class CashShop private constructor() {
     private val SmokeBurgerPrice = 8900
     private val ShroomBurgerPrice = 9400
     private val CheeseBurgerPrice = 6900
-    private val HamburgerPrice = 5400
+    private val BasicBurgerPrice = 5400
 
     companion object {
         @Volatile
@@ -25,7 +25,7 @@ class CashShop private constructor() {
         }
     }
 
-    fun purchaseShackBurgerByCustomer(character: Customer) {
+    fun purchaseShackBurgerByclassperson(character: classperson) {
         if (character.money >= ShackBurgerPrice) {
             println("[구매 후 금액]: [${character.money} - ${ShackBurgerPrice}] = ${character.money - ShackBurgerPrice}")
             character.money -= ShackBurgerPrice
@@ -35,17 +35,17 @@ class CashShop private constructor() {
         }
     }
 
-    fun purchaseSmokeBurgerPriceByCustomer(character: Customer) {
+    fun purchaseSmokeBurgerPriceByclassperson(character: classperson) {
         if (character.money >= SmokeBurgerPrice) {
             println("[구매 후 금액]: [${character.money} - ${SmokeBurgerPrice}] = ${character.money - SmokeBurgerPrice}")
             character.money -= SmokeBurgerPrice
-            character.weapons.add("SmokeBurger를 구매합니다")
+            character.shoppinglist.add("SmokeBurger를 구매합니다")
         } else {
             println("돈이 부족합니다.")
         }
     }
 
-    fun purchaseShroomBurgerPriceByCustomer(character: Customer) {
+    fun purchaseShroomBurgerPriceByclassperson(character: classperson) {
         if (character.money >= ShroomBurgerPrice) {
             println("[구매 후 금액]: [${character.money} - ${ShroomBurgerPrice}] = ${character.money - ShroomBurgerPrice}")
             character.money -= ShroomBurgerPrice
@@ -55,7 +55,7 @@ class CashShop private constructor() {
         }
     }
 
-    fun purchaseCheeseBurgerPriceByCustomer(character: Customer) {
+    fun purchaseCheeseBurgerPriceByclassperson(character: classperson) {
         if (character.money >= CheeseBurgerPrice) {
             println("[구매 후 금액]: [${character.money} - ${CheeseBurgerPrice}] = ${character.money - CheeseBurgerPrice}")
             character.money -= CheeseBurgerPrice
@@ -65,10 +65,10 @@ class CashShop private constructor() {
         }
     }
 
-    fun purchaseHamburgerPriceByCustomer(character: Customer) {
-        if (character.money >= HamburgerPrice) {
-            println("[구매 후 금액]: [${character.money} - ${HamburgerPrice}] = ${character.money - HamburgerPrice}")
-            character.money -= HamburgerPrice
+    fun purchaseHamburgerPriceByclassperson(character: classperson) {
+        if (character.money >= BasicBurgerPrice) {
+            println("[구매 후 금액]: [${character.money} - ${BasicBurgerPrice}] = ${character.money - BasicBurgerPrice}")
+            character.money -= BasicBurgerPrice
             character.shoppinglist.add("Hamburger를 구매합니다")
         } else {
             println("돈이 부족합니다.")

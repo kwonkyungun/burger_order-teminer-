@@ -11,7 +11,7 @@ class Hamburger {
         println("2. SmokeShack    | W 8900 | 베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거")
         println("3. ShroomBurger  | W 9400 | 몬스터 치즈와 체다 치즈로 속을 채운 베지테리안 버거")
         println("4. Cheeseburger  | W 6900 | 포테이토 번과 비프패티, 치즈가 토핑된 치즈버거")
-        println("5. Hamburger     | W 5400 | 비프패티를 기반으로 야채가 들어간 기본버거")
+        println("5. BasicBurger   | W 5400 | 비프패티를 기반으로 야채가 들어간 기본버거")
         println("0. 뒤로가기       | 뒤로가기")
 
         var Burgerselect = readLine()!!.toInt()
@@ -41,8 +41,8 @@ class Hamburger {
             Ingredients()
             count4++
         } else if (Burgerselect == 5) {
-            println("Hamburger를 고르셨습니다")
-            println("Hamburger | W 5400 | 비프패티를 기반으로 야채가 들어간 기본버거")
+            println("BasicBurger를 고르셨습니다")
+            println("BasicBurger | W 5400 | 비프패티를 기반으로 야채가 들어간 기본버거")
             Ingredients()
             count5++
         } else if (Burgerselect == 0) {
