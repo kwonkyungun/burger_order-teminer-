@@ -3,8 +3,9 @@ package com.example.kiosk
 import java.util.function.BinaryOperator
 
 fun main() {
-    val myMoney = initmoney("money").toString().toInt()
-    val myName = initmoney("name").toString()
+    var myMoney = initmoney("money").toString().toInt()
+    var myName = initmoney("name").toString()
+    var classperson = Classperson(myName, myMoney)
     initmoney(type = String.toString())
 
     initmenu()
@@ -48,7 +49,7 @@ fun initmenu() {
     }
 }
 
-class classperson(_name: String, _money: Int)  {
+class Classperson(_name: String, _money: Int)  {
     var name: String = _name
     var money: Int = _money
     var shoppinglist: MutableList<String>
@@ -62,27 +63,12 @@ class classperson(_name: String, _money: Int)  {
 }
 
 
-open class CashShop private constructor() {
+object CashShop  {
     private val cola = 1000
     private val cider = 800
     private val Fanta = 700
     private val Miranda = 500
-
-    companion object {
-        @Volatile
-        private var instance: CashShop? = null
-
-        fun getInstance(): CashShop {
-            if (instance == null) {
-                synchronized(this) {
-                    instance = CashShop()
-                }
-            }
-            return instance!!
-        }
-    }
-
-    fun colapurchase(Character: classperson) {
+     fun colapurchase(Character: Classperson) {
         if (Character.money >= cola) {
             println("[구매 후 금액]: [${Character.money} - ${cola}] = ${Character.money - cola}")
             Character.money -= cola
@@ -105,9 +91,9 @@ open class CashShop private constructor() {
     }
 }
 
-fun opencolapurchase(character: classperson) {
-    var CashShop = CashShop.getInstance()
 
+
+fun opencolapurchase(character: Classperson) {
     println("구매전 : ${character.money}")
     CashShop.colapurchase(character)
     println("구매전 : ${character.money}")
@@ -125,6 +111,7 @@ open class classDrink {
 
         if (Drinkselect == 1) {
             count1++
+            opencolapurchase(Classperson)
 
         } else if (Drinkselect == 2) {
             count2++
