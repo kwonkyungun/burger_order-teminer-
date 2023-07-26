@@ -1,16 +1,16 @@
 package com.example.kiosk
 
+import com.example.menu.CashShop
 import com.example.menu.Hamburger
+import com.example.menu.classperson
 import java.util.function.BinaryOperator
 
 fun main() {
     val myMoney = initmoney("money").toString().toInt()
+    val myName = initmoney("name").toString()
     initmoney(type = String.toString())
-
     initmenu()
-
 }
-
 
 fun initmoney(type: String): Any? {
     return when (type) {
@@ -29,6 +29,7 @@ fun initmoney(type: String): Any? {
         else -> {}
     }
 }
+
 
 fun initmenu() {
     println("========================Welcome=========================")
@@ -52,4 +53,12 @@ fun initmenu() {
         initmenu()
     }
 }
+
+fun openpurchaseBurger(character: classperson) {
+    var cashShop = CashShop.getInstance()
+    println("구매전 금액: ${character.money}")
+    cashShop.purchaseBurger(character)
+    println("구매후 금액: ${character.money}")
+}
+
 

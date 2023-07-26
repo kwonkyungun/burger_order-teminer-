@@ -2,8 +2,6 @@ package com.example.menu
 
 import com.example.kiosk.initmenu
 
-//class Burger {
-
 class Hamburger {
     fun burger() {
         println("[ Burgers MENU ]")
@@ -70,19 +68,19 @@ class Hamburger {
 
             when (selectNumber) {
                 1 -> {
-                    println("패티를 ${count1}번 추가합니다.")
+                    println("패티를 ${count1}번 | W 1500 | 추가합니다.")
                     count1++
 
                 }
 
                 2 -> {
-                    println("양상추를 ${count2}번 추가합니다.")
+                    println("양상추를 ${count2}번 | W 1000 | 추가합니다.")
                     count2++
 
                 }
 
                 3 -> {
-                    println("쉑소스를 ${count3}번 추가합니다.")
+                    println("쉑소스를 ${count3}번 | W 1000 | 추가합니다.")
                     count3++
 
                 }
