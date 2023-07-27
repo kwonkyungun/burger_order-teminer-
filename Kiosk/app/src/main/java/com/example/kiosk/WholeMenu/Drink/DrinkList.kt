@@ -55,12 +55,13 @@ open class DrinkList {
                         println("미란다를 ${count3}잔 추가합니다.")
                         count4++
                     }
+
                     else -> {
                         println("메인메뉴로 돌아갑니다.")
                         break
                     }
                 }
             }
-            class InitMenu()
+            InitMenu().mainMenu()
     }
 }
