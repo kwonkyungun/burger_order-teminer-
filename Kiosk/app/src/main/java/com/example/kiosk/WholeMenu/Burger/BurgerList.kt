@@ -2,7 +2,7 @@ package com.example.menu
 
 import com.example.kiosk.initmenu
 
-class Hamburger {
+class BurgerList {
     fun burger() {
         println("[ Burgers MENU ]")
         println("1. ShackBurger   | W 6900 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거")
