@@ -16,10 +16,9 @@ class InitMenu {
                 classDrink().Beverage()
             } else if (select == 4) {
                 println("종료합니다.")
-
             } else {
                 println("잘못된 정보입니다.")
-                 InitMenu()
+                 MainMenu()
             }
         }
 }
