@@ -1,6 +1,7 @@
 package com.example.menu
 
 import com.example.kiosk.InitMenu
+import com.example.kiosk.openorderMenu
 
 
 class BurgerList {

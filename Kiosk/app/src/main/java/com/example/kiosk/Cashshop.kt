@@ -1,10 +1,10 @@
 package com.example.kiosk
 
 object Cashshop {
-        val cola = 1000
-        val cider = 800
-        val Fanta = 700
-        val Miranda = 500
+    val cola = 1000
+    val cider = 800
+    val Fanta = 700
+    val Miranda = 500
 
     fun orderMenu(Character: Customer) {
         if (Character.money >= cola) {
@@ -27,13 +27,11 @@ object Cashshop {
             println("돈이 부족합니다.")
         }
     }
-
 }
 
-    fun openorderMenu(character: Customer) {
-        println("구매전 : ${character.money}")
-        Cashshop.orderMenu(character)
-        println("구매후 : ${character.money}")
-    }
-
+fun openorderMenu(character: Customer) {
+    println("구매전 : ${character.money}")
+    Cashshop.orderMenu(character)
+    println("구매후 : ${character.money}")
+}
 

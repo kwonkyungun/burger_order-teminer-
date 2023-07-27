@@ -3,12 +3,12 @@ package com.example.kiosk.WholeMenu.Drink
 import com.example.kiosk.Cashshop
 import com.example.kiosk.Customer
 import com.example.kiosk.InitMenu
+import com.example.kiosk.openorderMenu
 
 
 open class DrinkList {
 
         fun beverage() {
-
             println("[ Drink MENU ]")
             println("1. Cloa    | W 1000 | \n" +
                     "2. Sider   | W 800  | \n" +
