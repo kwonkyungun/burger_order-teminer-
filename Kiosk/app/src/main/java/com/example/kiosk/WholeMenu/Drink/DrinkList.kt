@@ -21,6 +21,9 @@ open class DrinkList {
             var count4 = 1
             if (Drinkselect == 1) {
                 count1++
+
+
+
             } else if (Drinkselect == 2) {
                 count2++
             } else if (Drinkselect == 3) {
