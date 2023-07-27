@@ -1,6 +1,7 @@
 package com.example.menu
 
-import com.example.kiosk.initmenu
+import com.example.kiosk.InitMenu
+
 
 class BurgerList {
     fun burger() {
@@ -47,7 +48,7 @@ class BurgerList {
             count5++
         } else if (Burgerselect == 0) {
             println("뒤로가기")
-            mainMenu()
+            InitMenu().mainMenu()
         }
     }
 
@@ -91,6 +92,6 @@ class BurgerList {
                 }
             }
         }
-        mainMenu()
+        InitMenu().mainMenu()
     }
 }

@@ -3,30 +3,30 @@ package com.example.kiosk
 import java.util.function.BinaryOperator
 
 fun main() {
-    val myMoney = initmoney("money").toString().toInt()
-    initmoney(type = String.toString())
+    val menuSelect=InitMenu()
+    menuSelect.mainMenu()
 
 
 }
 
 
-fun initmoney(type: String): Any? {
-    return when (type) {
-        "money" -> {
-            println("결제 가능한 금액을 입력해 주세요")
-            while (true) {
-                try {
-                    var Money: String? = readLine()
-                    return Money?.toInt()
-                } catch (e: Exception) {
-                    println("금액을 다시 입력해 주세요")
-                }
-            }
-        }
-
-        else -> {}
-    }
-}
+//fun initmoney(type: String): Any? {
+//    return when (type) {
+//        "money" -> {
+//            println("결제 가능한 금액을 입력해 주세요")
+//            while (true) {
+//                try {
+//                    var Money: String? = readLine()
+//                    return Money?.toInt()
+//                } catch (e: Exception) {
+//                    println("금액을 다시 입력해 주세요")
+//                }
+//            }
+//        }
+//
+//        else -> {}
+//    }
+//}
 
 //fun initmenu() {
 //
