@@ -1,10 +1,12 @@
 package com.example.kiosk
 
+import java.util.function.BinaryOperator
+
 fun main() {
 
     initmoney(type = String.toString())
-    initmenu()
 
+    initmenu()
 }
 
 fun initmoney(type: String): Any? {
@@ -25,7 +27,7 @@ fun initmoney(type: String): Any? {
     }
 }
 
-fun initmenu() {
+open class initmenu () {
 
     println("1번: [햄버거메뉴] 2번: [사이드메뉴] 3번: [음료메뉴] 4번: [종료]")
     var select = readLine()!!.toInt()
@@ -60,11 +62,13 @@ class Classperson(_name: String, _money: Int)  {
 
 
 object CashShop  {
+
+
     private val cola = 1000
     private val cider = 800
     private val Fanta = 700
     private val Miranda = 500
-     fun colapurchase(Character: Classperson) {
+    fun colapurchase(Character: Classperson) {
         if (Character.money >= cola) {
             println("[구매 후 금액]: [${Character.money} - ${cola}] = ${Character.money - cola}")
             Character.money -= cola
@@ -97,6 +101,7 @@ fun opencolapurchase(character: Classperson) {
 
 open class classDrink {
     fun Beverage() {
+
         var myMoney = initmoney("money").toString().toInt()
         var myName = initmoney("name").toString()
         var classperson = Classperson(myName, myMoney)
@@ -110,7 +115,7 @@ open class classDrink {
 
         if (Drinkselect == 1) {
             count1++
-            opencolapurchase(classperson)
+            opencolapurchase(Classperson)
 
         } else if (Drinkselect == 2) {
             count2++
