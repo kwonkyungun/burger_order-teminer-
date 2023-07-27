@@ -8,8 +8,6 @@ import com.example.kiosk.InitMenu
 open class DrinkList {
 
         fun beverage() {
-            val DrinkPrice = Cashshop()
-
 
             println("[ Drink MENU ]")
             println("1. Cloa    | W 1000 | \n" +
@@ -25,7 +23,7 @@ open class DrinkList {
             var count4 = 1
             if (Drinkselect == 1) {
                 count1++
-                Cashshop().orderMenu(Customer(_money = toString().toInt()))
+
 
             } else if (Drinkselect == 2) {
                 count2++

@@ -1,6 +1,6 @@
 package com.example.kiosk
 
-class Cashshop {
+object Cashshop {
         val cola = 1000
         val cider = 800
         val Fanta = 700
@@ -29,5 +29,11 @@ class Cashshop {
     }
 
 }
+
+    fun openorderMenu(character: Customer) {
+        println("구매전 : ${character.money}")
+        Cashshop.orderMenu(character)
+        println("구매후 : ${character.money}")
+    }
 
 

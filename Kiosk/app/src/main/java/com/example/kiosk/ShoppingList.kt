@@ -1,4 +1,4 @@
-package com.example.kiosk
-
-class ShoppingList {
-}
+//package com.example.kiosk
+//
+//class ShoppingList {
+//}
