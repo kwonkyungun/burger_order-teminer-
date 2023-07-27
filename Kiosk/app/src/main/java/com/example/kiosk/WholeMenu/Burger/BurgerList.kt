@@ -1,5 +1,6 @@
 package com.example.menu
 
+import com.example.kiosk.InitMenu
 import com.example.kiosk.initmenu
 
 class BurgerList {
@@ -47,7 +48,7 @@ class BurgerList {
             count5++
         } else if (Burgerselect == 0) {
             println("뒤로가기")
-            mainMenu()
+            InitMenu().mainMenu()
         }
     }
 
@@ -91,6 +92,17 @@ class BurgerList {
                 }
             }
         }
-        mainMenu()
+        InitMenu().mainMenu()
+
     }
 }
+
+//class MenuManager
+//    private val menuItems = ArrayList<MenuItems>()
+//    init{
+//        menuItems.apply {
+//            val burger = arrayListOf(
+//                BurgerList(1, "쉑버거", 6.9, "맛있는 쉑버거", "잇츠쏘굿")
+//            )
+//        }
+//    }

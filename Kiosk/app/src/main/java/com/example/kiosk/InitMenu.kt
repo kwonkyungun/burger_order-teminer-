@@ -1,7 +1,5 @@
 package com.example.kiosk
 
-import com.example.kiosk.WholeMenu.Drink.DrinkList
-import com.example.kiosk.WholeMenu.Side.SideList
 
 
 class InitMenu {
@@ -13,10 +11,9 @@ class InitMenu {
                 println("햄버거메뉴입니다.")
             } else if (select == 2) {
                 println("사이드메뉴입니다.")
-                SideList().sidemenu()
             } else if (select == 3) {
                 println("음료메뉴입니다.")
-                DrinkList().beverage()
+                classDrink().Beverage()
             } else if (select == 4) {
                 println("종료합니다.")
             } else {
