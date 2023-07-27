@@ -2,7 +2,6 @@ package com.example.kiosk
 
 import com.example.kiosk.WholeMenu.Drink.DrinkList
 import com.example.kiosk.WholeMenu.Side.SideList
-import com.example.menu.BurgerList
 
 
 class InitMenu {
@@ -12,7 +11,6 @@ class InitMenu {
             var select = readLine()!!.toInt()
             if (select == 1) {
                 println("햄버거메뉴입니다.")
-                BurgerList().burger()
             } else if (select == 2) {
                 println("사이드메뉴입니다.")
                 SideList().sidemenu()

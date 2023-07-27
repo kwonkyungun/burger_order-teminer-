@@ -3,29 +3,30 @@ package com.example.kiosk
 import java.util.function.BinaryOperator
 
 fun main() {
-    val mainselect = InitMenu()
-    mainselect.mainMenu()
+    val myMoney = initmoney("money").toString().toInt()
+    initmoney(type = String.toString())
+
 
 }
 
 
-//fun initmoney(type: String): Any? {
-//    return when (type) {
-//        "money" -> {
-//            println("결제 가능한 금액을 입력해 주세요")
-//            while (true) {
-//                try {
-//                    var Money: String? = readLine()
-//                    return Money?.toInt()
-//                } catch (e: Exception) {
-//                    println("금액을 다시 입력해 주세요")
-//                }
-//            }
-//        }
-//
-//        else -> {}
-//    }
-//}
+fun initmoney(type: String): Any? {
+    return when (type) {
+        "money" -> {
+            println("결제 가능한 금액을 입력해 주세요")
+            while (true) {
+                try {
+                    var Money: String? = readLine()
+                    return Money?.toInt()
+                } catch (e: Exception) {
+                    println("금액을 다시 입력해 주세요")
+                }
+            }
+        }
+
+        else -> {}
+    }
+}
 
 //fun initmenu() {
 //
@@ -45,7 +46,7 @@ fun main() {
 //        println("잘못된 정보입니다.")
 //        initmenu()
 //    }
-//}
+////}
 //
 //class classDrink {
 //    fun Beverage() {
@@ -105,3 +106,29 @@ fun main() {
 //        initmenu()
 //    }
 //}
+//    if (Drinkselect == 1) {
+//        println("콜라를 선택하였습니다.")
+//        val num1 = "콜라"
+//
+//    } else if (Drinkselect == 2) {
+//        println("사이다를 선택하였습니다.")
+//        val num1 = "사이다"
+//
+//    } else if (Drinkselect == 3) {
+//        println("환타를 선택하였습니다.")
+//        val num1 = "환타"
+//
+//    } else if (Drinkselect == 4) {
+//        println("미란다를 선택하였습니다.")
+//        val num1 = "미란다"
+//
+//    } else if (Drinkselect == 5) {
+//        println("뒤로가기")
+//        initmenu()
+//    } else {
+//        println("잘못선택하였습니다")
+//        Beverage()
+//    }
+
+//}
+
