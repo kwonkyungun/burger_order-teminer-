@@ -60,12 +60,13 @@ class BurgerList {
         println("3. ShakeSource  | W 1000 | 쉑소스 추가하기")
         println("0. 추가안함      | 뒤로가기")
 
-        var count1 = 1
-        var count2 = 1
-        var count3 = 1
 
         while (true) {
             var selectNumber = readLine()!!.toInt()
+            var count1 = 1
+            var count2 = 1
+            var count3 = 1
+
 
             when (selectNumber) {
                 1 -> {
@@ -92,6 +93,5 @@ class BurgerList {
                 }
             }
         }
-        InitMenu().mainMenu()
     }
 }
