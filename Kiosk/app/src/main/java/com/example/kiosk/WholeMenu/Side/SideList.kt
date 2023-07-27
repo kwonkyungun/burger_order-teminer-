@@ -44,7 +44,7 @@ class SideList {
         println("1. Chicken Tenders  | W 4500 | 치킨텐더 추가하기")
         println("2. French Fries     | W 3000 | 프렌치 프라이 추가하기")
         println("3. Cheese Stick     | W 2000 | 치즈스틱 추가하기")
-        println("4. 추가안함           | 뒤로가기")
+        println("0. 추가안함           | 뒤로가기")
 
         var count1 = 1
         var count2 = 1

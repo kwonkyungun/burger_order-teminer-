@@ -1,6 +1,7 @@
 package com.example.kiosk.WholeMenu.Drink
 
 import com.example.kiosk.Cashshop
+import com.example.kiosk.Customer
 import com.example.kiosk.InitMenu
 
 
@@ -24,13 +25,17 @@ open class DrinkList {
             var count4 = 1
             if (Drinkselect == 1) {
                 count1++
+                Cashshop().orderMenu(Customer(_money = toString().toInt()))
 
             } else if (Drinkselect == 2) {
                 count2++
+
             } else if (Drinkselect == 3) {
                 count3++
+
             } else if (Drinkselect == 4) {
                 count4++
+
             } else if(Drinkselect == 0) {
                 println("뒤로가기")
                 InitMenu().mainMenu()
@@ -46,18 +51,22 @@ open class DrinkList {
                     1 -> {
                         println("콜라를 ${count1}잔 추가합니다.")
                         count1++
+
                     }
                     2 -> {
                         println("사이다를 ${count2}잔 추가합니다.")
                         count2++
+
                     }
                     3 -> {
                         println("환타를 ${count3}잔 추가합니다.")
                         count3++
+
                     }
                     4 -> {
                         println("미란다를 ${count3}잔 추가합니다.")
                         count4++
+
                     }
 
                     else -> {
