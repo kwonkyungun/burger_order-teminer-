@@ -4,8 +4,6 @@ import java.util.function.BinaryOperator
 
 fun main() {
 
-
-
     val menuSelect=InitMenu()
     val menuPrice = InitMenu()
 
@@ -14,23 +12,7 @@ fun main() {
 
 
 }
-//fun initmoney(type: String): Any? {
-//    return when (type) {
-//        "money" -> {
-//            println("결제 가능한 금액을 입력해 주세요")
-//            while (true) {
-//                try {
-//                    var Money: String? = readLine()
-//                    return Money?.toInt()
-//                } catch (e: Exception) {
-//                    println("금액을 다시 입력해 주세요")
-//                }
-//            }
-//        }
-//
-//        else -> {}
-//    }
-//}
+
 //object CashShop  {
 //    private val cola = 1000
 //    private val cider = 800
@@ -58,9 +40,7 @@ fun main() {
 //        }
 //    }
 //}
-//
-//
-//
+
 //fun opencolapurchase(character: Classperson) {
 //    println("구매전 : ${character.money}")
 //    CashShop.colapurchase(character)
