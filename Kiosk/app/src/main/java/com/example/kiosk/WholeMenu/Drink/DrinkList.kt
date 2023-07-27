@@ -1,4 +1,4 @@
-package com.example.kiosk.Hol_menu.Drink
+package com.example.kiosk.WholeMenu.Drink
 
 import com.example.kiosk.initmenu
 

@@ -1,4 +1,4 @@
-package com.example.kiosk.Hol_menu
+package com.example.kiosk.WholeMenu
 
 
 class Calculator(private val operator: AbstractOperation) {
