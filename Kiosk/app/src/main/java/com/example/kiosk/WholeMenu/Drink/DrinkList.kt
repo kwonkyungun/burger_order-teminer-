@@ -2,6 +2,7 @@ package com.example.kiosk.WholeMenu.Drink
 
 import com.example.kiosk.initmenu
 
+
 open class DrinkList {
 
         fun Beverage() {
@@ -28,7 +29,7 @@ open class DrinkList {
                 count4++
             } else if(Drinkselect == 0) {
                 println("뒤로가기")
-                InitMenu()
+                class InitMenu()
             } else {
                 println("잘못입력하였습니다.")
             }
