@@ -5,7 +5,7 @@ import com.example.kiosk.initmenu
 
 open class DrinkList {
 
-        fun Beverage() {
+        fun beverage() {
 
             println("[ Drink MENU ]")
             println("1. Cloa    | W 1000 | \n" +
