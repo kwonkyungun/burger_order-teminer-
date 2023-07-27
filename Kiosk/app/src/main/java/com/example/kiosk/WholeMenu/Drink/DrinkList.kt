@@ -1,6 +1,6 @@
 package com.example.kiosk.WholeMenu.Drink
 
-import com.example.kiosk.initmenu
+import com.example.kiosk.InitMenu
 
 
 open class DrinkList {
@@ -29,7 +29,7 @@ open class DrinkList {
                 count4++
             } else if(Drinkselect == 0) {
                 println("뒤로가기")
-                class InitMenu()
+                InitMenu().mainMenu()
             } else {
                 println("잘못입력하였습니다.")
             }
