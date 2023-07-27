@@ -90,8 +90,10 @@ class BurgerList {
                 else -> {
                     println("뒤로가기")
                     break
+
                 }
             }
         }
+        InitMenu().mainMenu()
     }
 }

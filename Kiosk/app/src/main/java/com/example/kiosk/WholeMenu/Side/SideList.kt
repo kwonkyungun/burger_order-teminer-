@@ -75,6 +75,7 @@ class SideList {
 
                 0 -> {
                     println("뒤로가기")
+                    break
                 }
 
                 else -> {
@@ -83,6 +84,7 @@ class SideList {
                 }
             }
         }
+        InitMenu().mainMenu()
     }
 }
 
